@@ -49,6 +49,7 @@ const Header = () => {
         navigate('/login');
         window.location.reload();
     }
+    console.log(user);
     return (
         <header className={themeConfig.semidark && themeConfig.menu === 'horizontal' ? 'dark' : ''}>
             <div className='shadow-sm'>
@@ -161,7 +162,7 @@ const Header = () => {
                                                     {user?.fullname}
                                                 </h4>
                                                 <button type='button' className='text-black/60 hover:text-primary dark:text-dark-light/60 dark:hover:text-white'>
-                                                {user?.role}
+                                                {user?.username}
                                                 </button>
                                             </div>
                                         </div>

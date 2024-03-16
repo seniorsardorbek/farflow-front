@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 const rawCookieData = Cookies.get('data');
 const initialState = {
     token: Cookies.get('passport') || false,
-    user: {fullname: "Operator" , role :"flowsadmin"} , 
+    user: {username: "ferganaflow" , fullname :"Fergana Admin"} , 
     role :  "admin"
 };
 

@@ -1,16 +1,4 @@
-export interface DevicesFace {
-    _id: string;
-    region: RegionFace;
-    lat: number;
-    long: number;
-    serie: string;
-    name: string ;
-    device_privet_key: string;
-    date: number;
-    owner: UserFace;
-    created_at: string;
-    updated_at: string;
-}
+
 export interface ResponseData <T>{
     total : number;
     offset : number;
@@ -33,7 +21,7 @@ export interface DevicesFaceOpt {
 
 export interface UserFace {
     fullname: string;
-    role: string;
+    username: string;
 }
 export interface UserFaceOpt {
     _id?: string;
@@ -52,10 +40,11 @@ export interface RegionFace {
 }
 export interface FlowFace {
     _id: string;
-    level: number;
-    avg_level: number;
-    serie: string;
+    day: number;
+    month: number;
+    total: number;
     name: string;
+    region: string;
     created_at: string;
 }
 export interface EventFaceHandelExel {

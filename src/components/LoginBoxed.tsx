@@ -29,9 +29,11 @@ const LoginBoxed = () => {
         api.post('/auth/login', data, { headers: { 'Content-type': 'application/json' } })
             .then(res => {
                 if (res.status === 200) {
-                    const { token, msg } = res.data;
-                    console.log(token);
+                    const { token, msg , data } = res.data;
+                    console.log(data);
                     dispatch(setToken({ token }));
+
+                    dispatch(setUser({user: data}))
                     navigate('/');
                     toast.fire({
                         icon: 'success',
