@@ -1,9 +1,9 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { toast } from './toast';
 const local = `http://localhost:4003`
-const server = `https://back3.livewater.uz`
+const server = `https://back4.livewater.uz`
 export const api = axios.create({
-    baseURL: local,
+    baseURL: server,
     headers: { 'Content-type': 'application/json' }
 });
 
